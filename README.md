@@ -53,6 +53,12 @@ This directory links to externally hosted skills shared by the SpecOps community
 | [specops-orchestrate-analysis](https://github.com/ryan-mahoney/ryan-llm-skills/blob/main/skills/specops-orchestrate-analysis/SKILL.md) | Orchestrate sequential subagents to generate one analysis per target from an initial plan, with per-target verification and fix-up loops. | [Ryan Mahoney](https://github.com/ryan-mahoney/ryan-llm-skills) |
 | [specops-orchestrate-spec-create](https://github.com/ryan-mahoney/ryan-llm-skills/blob/main/skills/specops-orchestrate-spec-create/SKILL.md) | Orchestrate sequential subagents to generate one implementation spec per analysis file, with per-file verification and fix-up loops. | [Ryan Mahoney](https://github.com/ryan-mahoney/ryan-llm-skills) |
 
+### Plugins
+
+| Plugin | Description | Author |
+|--------|-------------|--------|
+| [code-modernization](https://github.com/anthropics/claude-plugins-official/tree/morganl/code-modernization-plugin/plugins/code-modernization) | Claude Code plugin providing a structured `assess → map → extract-rules → reimagine → transform → harden` workflow with specialist agents (legacy-analyst, business-rules-extractor, architecture-critic, security-auditor, test-engineer) for modernizing legacy codebases. | [Anthropic](https://github.com/anthropics/claude-plugins-official) |
+
 ---
 
 ## How Skills Fit the SpecOps Pipeline
@@ -88,6 +94,7 @@ Skills should be human-authored, publicly accessible, and follow the SpecOps met
 
 ## Related Projects
 
+- [Code Modernization Plugin](https://github.com/anthropics/claude-plugins-official/tree/morganl/code-modernization-plugin/plugins/code-modernization) — Claude Code plugin with specialist agents and a phased workflow for legacy system modernization
 - [SpecOps Methodology](https://spec-ops.ai) — The specification-driven modernization methodology
 - [SpecOps AGENTS.md](https://github.com/mheadd/spec-ops-agents-file) — Template AGENTS.md for SpecOps projects
 - [SpecOps Action](https://github.com/spec-ops-method/spec-ops-action) — GitHub Action for spec change tracking
