@@ -14,7 +14,7 @@ This directory links to externally hosted skills shared by the SpecOps community
 
 | Skill | Description | Author |
 |-------|-------------|--------|
-| [specops](https://github.com/JarvusInnovations/agent-skills/blob/main/skills/specops/SKILL.md) | Spec-driven development workflow where specs are the source of truth. Covers philosophy, spec writing, directory structure, templates, how agents use specs, and project setup. Includes a spec drift auditor. | [Jarvus Innovations](https://github.com/JarvusInnovations/agent-skills) |
+| [specops](https://github.com/JarvusInnovations/specops/blob/main/skills/specops/SKILL.md) | Standalone spec-driven development skill. Specs declare complete desired state and stay authoritative for the life of the system, paired with a `plans/` protocol where status and dependency-DAG frontmatter track work-in-flight. Embeds an AXI-based CLI for DAG navigation and Mermaid rendering, a session-start hook that injects a ready/blocked/completed plans dashboard into every agent session, and governing `principles.md` files wired into both spec authoring and drift auditing. | [Jarvus Innovations](https://github.com/JarvusInnovations/specops) |
 
 ### Analysis & Planning
 
