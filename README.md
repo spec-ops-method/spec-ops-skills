@@ -13,13 +13,14 @@ This directory links to externally hosted skills shared by the SpecOps community
 ### Spec-Driven Development Workflow
 
 | Skill | Description | Author |
-|-------|-------------|--------|
+|:-------|:-------------|:--------|
 | [specops](https://github.com/JarvusInnovations/specops/blob/main/skills/specops/SKILL.md) | Standalone spec-driven development skill. Specs declare complete desired state and stay authoritative for the life of the system, paired with a `plans/` protocol where status and dependency-DAG frontmatter track work-in-flight. Embeds an AXI-based CLI for DAG navigation and Mermaid rendering, a session-start hook that injects a ready/blocked/completed plans dashboard into every agent session, and governing `principles.md` files wired into both spec authoring and drift auditing. | [Jarvus Innovations](https://github.com/JarvusInnovations/specops) |
 
 ### Analysis & Planning
 
 | Skill | Description | Author |
-|-------|-------------|--------|
+|:-------|:-------------|:--------|
+| [chester](https://github.com/spec-ops-method/chester) | An Agent Skill that teaches AI coding tools to investigate before they remove. It applies the principle of Chesterton's Fence to the codebases where the principle is hardest to follow: mature systems where nobody remembers why the fence was built. | [Mark Headd](https://github.com/spec-ops-method/chester) |
 | [specops-initial-plan](https://github.com/ryan-mahoney/ryan-llm-skills/blob/main/skills/specops-initial-plan/SKILL.md) | Create an initial SpecOps plan — extract a comprehensive, implementation-language-agnostic specification from an existing codebase, module, or workflow. | [Ryan Mahoney](https://github.com/ryan-mahoney/ryan-llm-skills) |
 | [specops-analysis](https://github.com/ryan-mahoney/ryan-llm-skills/blob/main/skills/specops-analysis/SKILL.md) | Perform a SpecOps analysis to produce a detailed 11-section specification from existing artifacts, including business rules, decision logic, defaults, thresholds, and policies. | [Ryan Mahoney](https://github.com/ryan-mahoney/ryan-llm-skills) |
 | [specops-refactor-plan](https://github.com/ryan-mahoney/ryan-llm-skills/blob/main/skills/specops-refactor-plan/SKILL.md) | Create a refactor-focused SpecOps plan for a specific source folder and goal — preserves behavioral contracts while producing a decision-complete refactor strategy. | [Ryan Mahoney](https://github.com/ryan-mahoney/ryan-llm-skills) |
@@ -27,13 +28,13 @@ This directory links to externally hosted skills shared by the SpecOps community
 ### Specification Generation
 
 | Skill | Description | Author |
-|-------|-------------|--------|
+|:------|:-------------|:--------|
 | [specops-make-spec](https://github.com/ryan-mahoney/ryan-llm-skills/blob/main/skills/specops-make-spec/SKILL.md) | Convert a verified SpecOps analysis into a deterministic implementation specification with architecture, acceptance criteria, and sequenced implementation steps. | [Ryan Mahoney](https://github.com/ryan-mahoney/ryan-llm-skills) |
 
 ### Verification & Auditing
 
 | Skill | Description | Author |
-|-------|-------------|--------|
+|:-------|:-------------|:--------|
 | [specops-ambiguity-audit](https://github.com/ryan-mahoney/ryan-llm-skills/blob/main/skills/specops-ambiguity-audit/SKILL.md) | Audit an analysis spec for ambiguities that would force an implementer to make undocumented judgment calls, then resolve them by researching the legacy source code via parallel subagents. | [Ryan Mahoney](https://github.com/ryan-mahoney/ryan-llm-skills) |
 | [specops-spec-coherence](https://github.com/ryan-mahoney/ryan-llm-skills/blob/main/skills/specops-spec-coherence/SKILL.md) | Audit a set of analysis specs for cross-spec coherence — dependency order, pairwise integration contracts, shared data models, side-effect ownership, and terminology — then patch gaps. | [Ryan Mahoney](https://github.com/ryan-mahoney/ryan-llm-skills) |
 | [specops-spec-conformance](https://github.com/ryan-mahoney/ryan-llm-skills/blob/main/skills/specops-spec-conformance/SKILL.md) | Audit an implementation spec against its source analysis spec for dropped, weakened, or contradicted requirements, then patch the implementation spec. | [Ryan Mahoney](https://github.com/ryan-mahoney/ryan-llm-skills) |
@@ -42,21 +43,21 @@ This directory links to externally hosted skills shared by the SpecOps community
 ### Testing
 
 | Skill | Description | Author |
-|-------|-------------|--------|
+|:-------|:-------------|:--------|
 | [specops-contract-tests](https://github.com/ryan-mahoney/ryan-llm-skills/blob/main/skills/specops-contract-tests/SKILL.md) | Generate framework-agnostic pytest contract tests from a SpecOps analysis file, covering interfaces, data models, policy rules, behavioral scenarios, error handling, and edge cases. | [Ryan Mahoney](https://github.com/ryan-mahoney/ryan-llm-skills) |
 | [specops-integration-test](https://github.com/ryan-mahoney/ryan-llm-skills/blob/main/skills/specops-integration-test/SKILL.md) | Generate integration tests for normative cross-module pathways discovered from analysis specs and the migrated call graph, reusing existing unit-test mocks. | [Ryan Mahoney](https://github.com/ryan-mahoney/ryan-llm-skills) |
 
 ### Orchestration
 
 | Skill | Description | Author |
-|-------|-------------|--------|
+|:-------|:-------------|:--------|
 | [specops-orchestrate-analysis](https://github.com/ryan-mahoney/ryan-llm-skills/blob/main/skills/specops-orchestrate-analysis/SKILL.md) | Orchestrate sequential subagents to generate one analysis per target from an initial plan, with per-target verification and fix-up loops. | [Ryan Mahoney](https://github.com/ryan-mahoney/ryan-llm-skills) |
 | [specops-orchestrate-spec-create](https://github.com/ryan-mahoney/ryan-llm-skills/blob/main/skills/specops-orchestrate-spec-create/SKILL.md) | Orchestrate sequential subagents to generate one implementation spec per analysis file, with per-file verification and fix-up loops. | [Ryan Mahoney](https://github.com/ryan-mahoney/ryan-llm-skills) |
 
 ### Plugins
 
 | Plugin | Description | Author |
-|--------|-------------|--------|
+|:--------|:-------------|:--------|
 | [code-modernization](https://github.com/anthropics/claude-plugins-official/tree/morganl/code-modernization-plugin/plugins/code-modernization) | Claude Code plugin providing a structured `assess → map → extract-rules → reimagine → transform → harden` workflow with specialist agents (legacy-analyst, business-rules-extractor, architecture-critic, security-auditor, test-engineer) for modernizing legacy codebases. | [Anthropic](https://github.com/anthropics/claude-plugins-official) |
 
 ---
@@ -95,6 +96,7 @@ Skills should be human-authored, publicly accessible, and follow the SpecOps met
 ## Related Projects
 
 - [Code Modernization Plugin](https://github.com/anthropics/claude-plugins-official/tree/morganl/code-modernization-plugin/plugins/code-modernization) — Claude Code plugin with specialist agents and a phased workflow for legacy system modernization
+- [Modernizing your Codebase with Codex](https://developers.openai.com/cookbook/examples/codex/code_modernization) - Playbook for using open AI's codecs coding tool to modernize a legacy code base
 - [SpecOps Methodology](https://spec-ops.ai) — The specification-driven modernization methodology
 - [SpecOps AGENTS.md](https://github.com/mheadd/spec-ops-agents-file) — Template AGENTS.md for SpecOps projects
 - [SpecOps Action](https://github.com/spec-ops-method/spec-ops-action) — GitHub Action for spec change tracking
